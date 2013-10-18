@@ -1,0 +1,19 @@
+{
+  "name": "vector2d-lib",
+  "version": "0.0.1",
+  "description": "A 2d JavaScript Vector library.",
+  "keywords": "vector, 2d, math",
+  "main": "./lib/vector2d-lib.js",
+  "homepage": "https://github.com/foldi/vector2d-lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foldi/vector2d-lib"
+  },
+  "author": {
+    "name": "Vince Allen",
+    "address": "Brooklyn, NY",
+    "email": "vince@vinceallen.com",
+    "twitter": "@vinceallenvince"
+  },
+  "license": "MIT"
+}
