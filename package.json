@@ -4,6 +4,13 @@
   "description": "A 2d JavaScript Vector library.",
   "keywords": "vector, 2d, math",
   "main": "./lib/vector2d-lib.js",
+  "devDependencies": {
+     "mocha": "",
+     "should": ""
+   },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
   "homepage": "https://github.com/foldi/vector2d-lib",
   "repository": {
     "type": "git",

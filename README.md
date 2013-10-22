@@ -17,6 +17,12 @@ To use:
   var vector = new vector2d();
 ```
 
+To test:
+```javascript
+  npm install
+  npm test
+```
+
 ### Browser
 Reference from a script tag:
 ```html
