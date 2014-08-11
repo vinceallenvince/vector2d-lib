@@ -9,12 +9,12 @@
  * @param {number} [opt_y = 0] The y location.
  * @constructor
  */
-var Vector = function(opt_x, opt_y) {
+function Vector(opt_x, opt_y) {
   var x = opt_x || 0,
       y = opt_y || 0;
   this.x = x;
   this.y = y;
-};
+}
 
 /**
  * Subtract two vectors.
