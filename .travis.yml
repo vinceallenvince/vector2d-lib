@@ -24,7 +24,10 @@ deploy:
     tags: true
     all_branches: true
   provider: npm
+  email: vince@vinceallen.com
   api_key:
-  - secure: "JWZTl6+wgCt78ox7VEX5wng9SX8bF6kMx3LvpIRbEfa9LVBaeyjnwXvyEgN6mPS4CRrRTtLBee4HOgDt5XJrtPc1gOgloYME0ZfSsDZM+OCjNUI7PRCA4h0S5Uqlt36YqxtQqamJOJsgxvCOgES08GWNZV51sj1cE/Y04j8lRwo="
+    secure: P32pxqIRFV7i7rd9H7lsyx3CE7MqWUiYigkTo4fEZPF8awO2dbEMk8caGOaFjNlKI78dQJ158dxYFt82SeTtu+0nrk9sU+4+o9dzW5zLklXYup2zTDk/dXxDh4Kk+PhkBJStxtJjV+cnVF8I47wrot8t3Cpssm6WZIWcUh3Ec1A=
   on:
     tags: true
+    all_branches: true
+    repo: vinceallenvince/vector2d-lib
