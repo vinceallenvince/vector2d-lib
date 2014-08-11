@@ -7,15 +7,6 @@ before_install:
 - npm install -g grunt-cli
 after_success: grunt release
 before_deploy: echo 'ready?'
-deploy:
-  provider: releases
-  api_key:
-    secure: W5kwsHMWpoH36mqSn3XkAxTIzRke59vdIbP/AsHRShVTg4yr5Nbb/vpKq9PLvAlr8fjNAuOr09SXXvezvW1EZb0NMxY/LLIFfo7+L72zxKZtR65yLUwqRwI9fV77Yo1IrKtVytRohMdxcs2rWes23hey2Vt97Lzo8rJT+PU5isk=
-  file: release/vector2d-lib.min.js
-  on:
-    repo: vinceallenvince/vector2d-lib
-    tags: true
-    all_branches: true
 after_deploy:
 - echo 'done!'
 - ./deploy-gh-pages.sh
@@ -23,3 +14,17 @@ env:
   global:
   - GH_REF: github.com/vinceallenvince/vector2d-lib.git
   - secure: EZY89AVPmycOQ1G/9y+vE6JBtr5bI9TFVpg5EiJvCnBX3FGTdFSoffMHZSjrwkSnSd1bPqO+NmWpgDbGaGuzaTyuddU6bEZPEH6CuKsS7cvMaTQ7kFlc3cMo8Q9qdHy6fzJ9HSCHZszPNScs4/XP9Yt6IKupzIiroUSDNHZzzpA=
+deploy:
+  provider: releases
+  api_key:
+    secure: qG3+nDlHKYE5bdRxu1uoywrzqtHosXtFD5mypn5wb1/5un7tdvQB9cvsZZJM6Qt/Gxdhn0kOYWsRaVkM72WExAHxtCTctAlcgHqvccuKz+swqnnzSXzxhwZ7EICmkCzqWH69cDI+kUW01DI1Irhni3O/3r47/Fk1O5IZP3NXF94=
+  file: release/vector2d-lib.min.js
+  on:
+    repo: vinceallenvince/vector2d-lib
+    tags: true
+    all_branches: true
+  provider: npm
+  api_key:
+  - secure: "JWZTl6+wgCt78ox7VEX5wng9SX8bF6kMx3LvpIRbEfa9LVBaeyjnwXvyEgN6mPS4CRrRTtLBee4HOgDt5XJrtPc1gOgloYME0ZfSsDZM+OCjNUI7PRCA4h0S5Uqlt36YqxtQqamJOJsgxvCOgES08GWNZV51sj1cE/Y04j8lRwo="
+  on:
+    tags: true
