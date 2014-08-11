@@ -1,1 +1,14 @@
-node_modules/
+#### FOLDERS ####
+node_modules
+reports
+doc
+out
+release
+
+#### FILES ####
+*.log
+*.DS_Store
+*.swp
+public/scripts/vector2d-lib.js
+public/scripts/vector2d-lib.min.js
+*.map
