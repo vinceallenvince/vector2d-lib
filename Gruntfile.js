@@ -36,23 +36,7 @@ module.exports = function(grunt) {
         src: ['src/**/*.js']
       }
     },
-    csslint: {
-      options: {
-        csslintrc: '.csslintrc'
-      },
-      lax: {
-        src: ['css/*.css']
-      }
-    },
-    cssmin: {
-      addBanner: {
-        options: {
-          banner: bannerContentMin
-        },
-        src: ['css/*.css'],
-        dest: 'release/' + latest + '.min.css'
-      }
-    },
+    clean: ['release/'],
     uglify: {
       options: {
         banner: bannerContentMin,
@@ -85,7 +69,7 @@ module.exports = function(grunt) {
     exec: {
       test: 'npm test',
       coverage: 'browserify -t coverify test/*.js | testling | coverify',
-      browserify: 'rm -r release && mkdir release && browserify ./src/vector2d-lib.js --standalone Vector -o ' + devRelease
+      browserify: 'mkdir release && browserify ./src/vector2d-lib.js --standalone Vector -o ' + devRelease
     },
     watch: {
       files: ['src/*.js'],
@@ -116,11 +100,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-plato');
   grunt.loadNpmTasks('grunt-jsdoc');
 
   grunt.registerTask('default', ['exec:browserify', 'copy:publicJS']);
-  grunt.registerTask('release', ['jshint', 'exec:browserify', 'uglify', 'copy:publicJS', 'jsdoc', 'plato']);
+  grunt.registerTask('release', ['clean', 'jshint', 'exec:browserify', 'uglify', 'copy:publicJS', 'jsdoc', 'plato']);
   grunt.registerTask('test', ['exec:test']);
   grunt.registerTask('coverage', ['exec:coverage']);
   grunt.registerTask('report', ['plato']);
