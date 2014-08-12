@@ -2,29 +2,83 @@
 
 A 2d JavaScript Vector library.
 
-## Usage
+##Install
 
-### Node.js
-To install:
-```
-  $ npm install vector2d-lib
-```
+To include vector2d-lib as a component in your project, use the node module.
 
-To use:
-```javascript
-  // In a node.js application if installed via npm
-  var vector2d = require('vector2d-lib');
-  var vector = new vector2d();
+```
+npm install vector2d-lib --save
 ```
 
-To test:
-```javascript
-  npm install
-  npm test
+You can also use the [standalone version](https://github.com/vinceallenvince/vector2d-lib/releases/latest) and reference the js file from your document.
+
+```
+<html>
+  <head>
+    <script src="scripts/vector2d-lib.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  ...
 ```
 
-### Browser
-Reference from a script tag:
-```html
-<script src="path/to/vector2d-lib.js" type="text/javascript"></script>
+##Usage
+
+The module exports a Vector class. In a nodejs project, you access it via:
+
+```
+var Vector = require('vector2d-lib');
+var vecA = new Vector(10, 10);
+```
+
+In the browser, the Vector class is a global.
+
+```
+<html>
+  <head>
+    <script src="scripts/vector2d-lib.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <script>
+      var vecA = new Vector(10, 10);
+    </script>
+  </body>
+</html>
+```
+
+Building this project
+------
+
+This project uses [Grunt](http://gruntjs.com). To build the project first install the node modules.
+
+```
+npm install
+```
+
+Next, run grunt.
+
+```
+grunt
+```
+
+To run the tests, run 'npm test'.
+
+```
+npm test
+```
+
+To check test coverage run 'grunt coverage'.
+
+```
+grunt coverage
+```
+
+A pre-commit hook is defined in /pre-commit that runs jshint. To use the hook, run the following:
+
+```
+ln -s ../../pre-commit .git/hooks/pre-commit
+```
+
+A post-commit hook is defined in /post-commit that runs the Plato complexity analysis tools. To use the hook, run the following:
+
+```
+ln -s ../../post-commit .git/hooks/post-commit
 ```

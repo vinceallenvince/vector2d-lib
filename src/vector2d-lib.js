@@ -245,9 +245,6 @@ Vector.prototype.midpoint = function(vector) {
  * @returns {Object} A vector.
  */
 Vector.prototype.dot = function(vector) {
-  if (this.z && vector.z) {
-    return this.x * vector.x + this.y * vector.y + this.z * vector.z;
-  }
   return this.x * vector.x + this.y * vector.y;
 };
 

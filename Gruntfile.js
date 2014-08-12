@@ -85,7 +85,7 @@ module.exports = function(grunt) {
     exec: {
       test: 'npm test',
       coverage: 'browserify -t coverify test/*.js | testling | coverify',
-      browserify: 'mkdir release && browserify ./src/vector2d-lib.js --standalone Vector -o ' + devRelease
+      browserify: 'rm -r release && mkdir release && browserify ./src/vector2d-lib.js --standalone Vector -o ' + devRelease
     },
     watch: {
       files: ['src/*.js'],
