@@ -1,3 +1,5 @@
+![Build status](https://travis-ci.org/vinceallenvince/vector2d-lib.svg?branch=master)
+
 # vector2d-lib
 
 A 2d JavaScript Vector library.
@@ -46,8 +48,7 @@ In the browser, the Vector class is a global.
 
 To learn how to use the various Vector functions, please review [the docs](http://vinceallenvince.github.io/vector2d-lib/doc/).
 
-Building this project
-------
+##Building this project
 
 This project uses [Grunt](http://gruntjs.com). To build the project first install the node modules.
 
@@ -84,3 +85,5 @@ A post-commit hook is defined in /post-commit that runs the Plato complexity ana
 ```
 ln -s ../../post-commit .git/hooks/post-commit
 ```
+
+View the [code complexity](http://vinceallenvince.github.io/vector2d-lib/reports/) report.
