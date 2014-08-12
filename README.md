@@ -31,8 +31,6 @@ var vecA = new Vector(10, 10);
 
 In the browser, the Vector class is a global.
 
-To learn how to use the various Vector functions, please review [the docs](http://vinceallenvince.github.io/vector2d-lib/doc/).
-
 ```
 <html>
   <head>
@@ -45,6 +43,8 @@ To learn how to use the various Vector functions, please review [the docs](http:
   </body>
 </html>
 ```
+
+To learn how to use the various Vector functions, please review [the docs](http://vinceallenvince.github.io/vector2d-lib/doc/).
 
 Building this project
 ------
