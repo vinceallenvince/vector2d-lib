@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="keywords" content="animation, DOM, renderer" />
+  <meta name="description" content="A DOM-based rendering engine." />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name='apple-mobile-web-app-capable' content='yes' />
+  <title>vector2d-lib</title>
+  <script src="scripts/vector2d-lib.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>10 Vectors!</h1>
+    <script type="text/javascript" charset="utf-8">
+
+      function getRandomNumber(low, high, flt) {
+        if (flt) {
+          return Math.random()*(high-(low-1)) + low;
+        }
+        return Math.floor(Math.random()*(high-(low-1))) + low;
+      };
+
+      var previousVec = new Vector();
+
+      for (var i = 0; i < 10; i++) {
+        var vec = new Vector();
+        vec.add(new Vector(i * getRandomNumber(-20, 20), i * getRandomNumber(-20, 20)));
+        var txtNode = document.createTextNode(i + ' {x: ' + vec.x + ' y: ' + vec.y + '}');
+        var p = document.createElement('p');
+        p.appendChild(txtNode);
+        document.body.appendChild(p);
+
+        var mag = vec.mag().toFixed(2);
+        var txtNode = document.createTextNode('magnitude: ' + mag);
+        var p = document.createElement('p');
+        p.appendChild(txtNode);
+        document.body.appendChild(p);
+
+        if (i) {
+          var dist = vec.distance(previousVec).toFixed(2);
+          var txtNode = document.createTextNode('distance to vector ' + (i - 1) + ': ' + dist);
+          var p = document.createElement('p');
+          p.appendChild(txtNode);
+          document.body.appendChild(p);
+        }
+
+        previousVec.x = vec.x;
+        previousVec.y = vec.y;
+
+      }
+    </script>
+  </body>
+</html>
