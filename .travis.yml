@@ -11,6 +11,14 @@ after_deploy:
 - echo 'done!'
 - ./deploy-gh-pages.sh
 deploy:
+  provider: releases
+  api_key:
+    secure: qG3+nDlHKYE5bdRxu1uoywrzqtHosXtFD5mypn5wb1/5un7tdvQB9cvsZZJM6Qt/Gxdhn0kOYWsRaVkM72WExAHxtCTctAlcgHqvccuKz+swqnnzSXzxhwZ7EICmkCzqWH69cDI+kUW01DI1Irhni3O/3r47/Fk1O5IZP3NXF94=
+  file: release/vector2d-lib.min.js
+  on:
+    repo: vinceallenvince/vector2d-lib
+    tags: true
+    all_branches: true
   provider: npm
   api_key:
     secure: P32pxqIRFV7i7rd9H7lsyx3CE7MqWUiYigkTo4fEZPF8awO2dbEMk8caGOaFjNlKI78dQJ158dxYFt82SeTtu+0nrk9sU+4+o9dzW5zLklXYup2zTDk/dXxDh4Kk+PhkBJStxtJjV+cnVF8I47wrot8t3Cpssm6WZIWcUh3Ec1A=
