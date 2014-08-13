@@ -10,5 +10,4 @@ release
 *.DS_Store
 *.swp
 public/scripts/vector2d-lib.js
-public/scripts/vector2d-lib.min.js
 *.map

@@ -31,7 +31,7 @@ var Vector = require('vector2d-lib');
 var vecA = new Vector(10, 10);
 ```
 
-In the browser, the Vector class is a global.
+In the browser, the standalone version exposes a Vector class.
 
 ```
 <html>
