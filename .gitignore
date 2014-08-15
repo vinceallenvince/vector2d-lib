@@ -2,12 +2,11 @@
 node_modules
 reports
 doc
-out
 release
 
 #### FILES ####
 *.log
 *.DS_Store
 *.swp
-public/scripts/vector2d-lib.js
 *.map
+public/scripts/vector2d-lib.js
